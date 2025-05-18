@@ -2,6 +2,8 @@ package com.example.springbootassessment.task.web.controller;
 
 import com.example.springbootassessment.task.web.dto.TaskDetailDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,12 +23,12 @@ public class TaskController {
      */
 
     @GetMapping
-    public List<TaskDetailDto> getAllTasks() {
+    public ResponseEntity<List<TaskDto>> getAllTasks() {
         throw new RuntimeException("todo: implement");
     }
 
     @GetMapping("/{projectId}")
-    public List<TaskDetailDto> getTasksByProjectId(@PathVariable Long projectId) {
+    public ResponseEntity<List<TaskDto>> getTasksByProjectId(@PathVariable Long projectId) {
         throw new RuntimeException("todo: implement");
     }
 }
