@@ -7,5 +7,5 @@ import java.util.Set;
 public interface TaskService {
     Set<Task> findAll();
 
-    Task createTask(Task task);
+    Set<Task> findAllByProjectId(Long projectId);
 }

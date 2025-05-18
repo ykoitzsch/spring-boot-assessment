@@ -16,7 +16,7 @@ public class TaskDatabaseService implements TaskService {
     }
 
     @Override
-    public Task createTask(Task task) {
+    public Set<Task> findAllByProjectId(Long projectId) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

@@ -52,4 +52,15 @@ class TaskIntegrationTest {
         fail("todo: implement");
     }
 
+    @Test
+    @DisplayName("given project id does not exist, when loading tasks by project id, then should return 404")
+    void givenProjectIdDoesNotExistWhenLoadingTasksByProjectIdThenShouldReturn404() {
+        // given
+
+        // when
+
+        // then
+        fail("todo: implement");
+    }
+
 }
