@@ -1,6 +1,5 @@
 package com.example.springbootassessment.task.web.controller;
 
-import com.example.springbootassessment.task.service.TaskService;
 import com.example.springbootassessment.task.web.dto.TaskDetailDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,15 +14,19 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TaskController {
 
-    private final TaskService taskService;
+    // todo: inject the task service, that loads the tasks from the database
+    /*
+    there are two implementations of the same TaskService interface, we need to ensure
+    that the right one is used by spring DI here!
+     */
 
     @GetMapping
     public List<TaskDetailDto> getAllTasks() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new RuntimeException("todo: implement");
     }
 
     @GetMapping("/{projectId}")
     public List<TaskDetailDto> getTasksByProjectId(@PathVariable Long projectId) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new RuntimeException("todo: implement");
     }
 }

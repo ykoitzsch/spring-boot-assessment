@@ -8,7 +8,7 @@ CREATE TABLE projects
 CREATE TABLE tasks
 (
     id          BIGINT PRIMARY KEY AUTO_INCREMENT,
-    project_id  BIGINT       NOT NULL,
+    project_id  BIGINT,
     title       VARCHAR(255) NOT NULL,
     description VARCHAR(1000),
     completed   BOOLEAN      NOT NULL,
@@ -17,3 +17,4 @@ CREATE TABLE tasks
         FOREIGN KEY (project_id) REFERENCES projects (id)
             ON DELETE CASCADE
 );
+
