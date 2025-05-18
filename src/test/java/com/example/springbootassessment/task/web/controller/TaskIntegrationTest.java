@@ -42,7 +42,7 @@ class TaskIntegrationTest {
 
     @Test
     @DisplayName("should load task by project id")
-    @Sql("/data/setup-task-with-project.sql")
+    @Sql(value = "/data/setup-task-with-project.sql", executionPhase = BEFORE_TEST_METHOD)
     void shouldLoadTasksByProjectId() {
         // given
 
@@ -62,5 +62,4 @@ class TaskIntegrationTest {
         // then
         fail("todo: implement");
     }
-
 }

@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
 
 @Primary
 @Service
@@ -13,12 +13,12 @@ import java.util.Set;
 public class TaskWebService implements TaskService {
 
     @Override
-    public Set<Task> findAll() {
+    public List<Task> findAll() {
         throw new RuntimeException("Task Webservice is currently not supported");
     }
 
     @Override
-    public Set<Task> findAllByProjectId(Long projectId) {
+    public List<Task> findAllByProjectId(Long projectId) {
         throw new RuntimeException("Task Webservice is currently not supported");
     }
 }
