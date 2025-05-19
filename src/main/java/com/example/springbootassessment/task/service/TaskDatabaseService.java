@@ -4,19 +4,19 @@ import com.example.springbootassessment.task.domain.Task;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class TaskDatabaseService implements TaskService {
 
     @Override
-    public Set<Task> findAll() {
+    public List<Task> findAll() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Set<Task> findAllByProjectId(Long projectId) {
+    public List<Task> findAllByProjectId(Long projectId) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

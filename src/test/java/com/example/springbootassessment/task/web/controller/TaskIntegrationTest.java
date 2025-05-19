@@ -1,9 +1,5 @@
 package com.example.springbootassessment.task.web.controller;
 
-import com.example.springbootassessment.factories.TaskEntityFactory;
-import com.example.springbootassessment.project.repository.ProjectRepository;
-import com.example.springbootassessment.task.domain.Task;
-import com.example.springbootassessment.task.repository.TaskRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,11 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import java.util.stream.IntStream;
-
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
+import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TEST_METHOD;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 class TaskIntegrationTest {
