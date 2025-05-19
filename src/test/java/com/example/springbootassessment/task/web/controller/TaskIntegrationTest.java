@@ -16,6 +16,7 @@ import static org.springframework.test.context.jdbc.Sql.ExecutionPhase.BEFORE_TE
 class TaskIntegrationTest {
 
     @Autowired
+    // resources on how to use in https://docs.spring.io/spring-framework/reference/testing/webtestclient.html#webtestclient-no-content
     private WebTestClient webTestClient;
 
     @AfterEach
